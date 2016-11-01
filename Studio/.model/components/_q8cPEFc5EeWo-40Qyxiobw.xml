@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<comp:Component xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:comp="http://virtubuil.com/schemas/comp.ecore" name="link_component" uuid="_q8cPEFc5EeWo-40Qyxiobw" componentClass="LINK" displayName="Link Component">
+  <variables xsi:type="comp:DeclaredVariable" name="height" uuid="_YHRbsFdAEeWo-40Qyxiobw" visibility="800" initValue="50">
+    <domain name="local" uuid="_YHRbsVdAEeWo-40Qyxiobw" visibility="300">
+      <typeSet bitSet="10"/>
+    </domain>
+  </variables>
+  <variables xsi:type="comp:DeclaredVariable" name="width" uuid="_WrLRIFdAEeWo-40Qyxiobw" visibility="800" initValue="50">
+    <domain name="local" uuid="_WrLRIVdAEeWo-40Qyxiobw" visibility="300">
+      <typeSet bitSet="10"/>
+    </domain>
+  </variables>
+  <cursorTwoD name="Cursor3" uuid="_5hDdIFc7EeWo-40Qyxiobw" twoDElementsColor="_c3-j4Fc7EeWo-40Qyxiobw _f9pUUFc7EeWo-40Qyxiobw">
+    <onColor href="../product_model.xml#N65557"/>
+  </cursorTwoD>
+  <geometry deletable="false" name="root" uuid="_q8cPEVc5EeWo-40Qyxiobw">
+    <twoDElement xsi:type="comp:TwoDBox" name="Box3" uuid="_c3-j4Fc7EeWo-40Qyxiobw" height="50.0" width="50.0" strokeWidth="2">
+      <facets xsi:type="comp:TwoDDynamicSizeFacet" heightDynamic="height" widthDynamic="width"/>
+      <bgColor href="../product_model.xml#N65567"/>
+      <color href="../product_model.xml#N65572"/>
+    </twoDElement>
+    <twoDElement xsi:type="comp:TwoDText" name="Text3" uuid="_f9pUUFc7EeWo-40Qyxiobw" translation="(8,24)" text="Link" fontSize="16">
+      <color href="../product_model.xml#N65572"/>
+      <bgColor href="../product_model.xml#N65562"/>
+    </twoDElement>
+    <units name="move_next" uuid="_fdGZwFdAEeWo-40Qyxiobw">
+      <facets xsi:type="comp:GeoUnitLineJointFacet" variable="width"/>
+    </units>
+    <units name="move_subs" uuid="_dbbngFdBEeWo-40Qyxiobw">
+      <facets xsi:type="comp:GeoUnitLineJointFacet" variable="height" vector="(0,0,1)"/>
+    </units>
+    <parentPlugs name="ParentPlug" uuid="_q8cPElc5EeWo-40Qyxiobw"/>
+  </geometry>
+  <roles name="nextLink" uuid="_wbLvsFc5EeWo-40Qyxiobw" initValue="NONE" public="false" type="LINKINSUBLINK" components="link_component, NONE, " lineInsertVariable="true">
+    <facets xsi:type="comp:PlugFacet" geoUnit="_fdGZwFdAEeWo-40Qyxiobw" position="(10,0,0)" type="plugForLinkConnection"/>
+    <facets xsi:type="comp:TwinRoleFacet"/>
+    <domain name="local" uuid="_wbLvsVc5EeWo-40Qyxiobw" visibility="300">
+      <typeSet bitSet="65536"/>
+      <values name="link_component" uuid="_xx8HQFc5EeWo-40Qyxiobw" editable="false" visibility="300"/>
+      <values name="NONE" uuid="N65792" editable="false" visibility="300"/>
+    </domain>
+  </roles>
+  <roles name="subs" uuid="_D8hWcFc8EeWo-40Qyxiobw" initValue="NONE" components="sub_component, NONE, ">
+    <facets xsi:type="comp:PlugFacet" geoUnit="_dbbngFdBEeWo-40Qyxiobw" position="(0,0,10)"/>
+    <domain name="local" uuid="_D8hWcVc8EeWo-40Qyxiobw" visibility="300">
+      <typeSet bitSet="65536"/>
+      <values name="sub_component" uuid="_E2bZ8Fc8EeWo-40Qyxiobw" editable="false" visibility="300"/>
+      <values name="NONE" uuid="N65819" editable="false" visibility="300"/>
+    </domain>
+  </roles>
+</comp:Component>
